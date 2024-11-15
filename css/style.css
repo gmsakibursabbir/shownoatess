@@ -1,0 +1,178 @@
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #8dd9bf;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.full-height {
+  height: 100vh;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Button Styles */
+.btn-exit {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  text-decoration: none;
+}
+.btn-exit:hover {
+  background: #222222;
+  color: #ffffff;
+  border-color: #222222;
+}
+.btn-resv {
+  width: 100%;
+  max-width: 500px;
+  background-color: #222222;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+.btn-resv:hover {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* Item Box & Content Styles */
+.cnt-txt,
+.cnt-nmbr {
+  color: #222222;
+}
+.item-box {
+  padding-top: 40px;
+}
+.cnt-txt {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1rem;
+  text-transform: capitalize;
+}
+.cnt-txt2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 30px;
+}
+.cnt-nmbr {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Card Styles */
+.item-card {
+  max-width: 900px;
+  min-height: 500px;
+  background: url("../img/digital-art-style-fall-seasonjpg.webp") no-repeat
+    center;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) -5px -5px 15px,
+    /* Darker highlight on top-left for more contrast */ rgba(0, 0, 0, 0.1) 5px
+      5px 20px,
+    /* Darker shadow on bottom-right for deeper effect */ rgba(0, 0, 0, 0.1) 0
+      8px 16px,
+    /* Slight shadow for lifting effect */ rgba(0, 0, 0, 0.2) inset 0 -4px 8px,
+    /* Darker inner shadow at bottom for a stronger fold look */
+      rgba(255, 255, 255, 0.2) inset 0 4px 8px; /* Softer inner light shadow at top for the fold */
+}
+
+.item-card h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #2e4053;
+  margin-bottom: 20px;
+}
+.item-card img {
+  max-width: 40px;
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .btn-resv {
+    max-width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px;
+  }
+  .item-card {
+    border-radius: 20px;
+  }
+  .item-card h1 {
+    font-size: 2.8rem;
+  }
+  .cnt-txt {
+    font-size: 16px;
+    line-height: 1rem;
+    padding-bottom: 6px;
+  }
+  .cnt-nmbr {
+    font-size: 32px;
+    line-height: 1rem;
+  }
+  .cnt-txt2 {
+    font-size: 22px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-exit {
+    color: #222222;
+    font-weight: 500;
+    padding: 10px 18px;
+  }
+  .btn-resv {
+    margin-top: 0px;
+  }
+  .item-card {
+    max-width: 100%;
+    min-height: 440px;
+    padding: 16px;
+    margin-top: 26px;
+  }
+  .item-card h1 {
+    font-size: 2rem;
+  }
+  .item-card img {
+    max-width: 34px;
+  }
+  .item-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .cnt-nmbr {
+    font-size: 24px;
+    line-height: 1rem;
+  }
+  .btn-resv {
+    width: 100%;
+    max-width: 100%;
+  }
+  .cnt-txt2 {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+}
