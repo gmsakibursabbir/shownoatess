@@ -80,6 +80,7 @@ html {
 
 /* Card Styles */
 .item-card {
+  position: relative; /* Required to position overlay correctly */
   max-width: 900px;
   min-height: 500px;
   background: url("../img/digital-art-style-fall-seasonjpg.webp") no-repeat
@@ -87,26 +88,40 @@ html {
   background-size: cover;
   padding: 30px;
   border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.1) -5px -5px 15px,
-    /* Darker highlight on top-left for more contrast */ rgba(0, 0, 0, 0.1) 5px
-      5px 20px,
-    /* Darker shadow on bottom-right for deeper effect */ rgba(0, 0, 0, 0.1) 0
-      8px 16px,
-    /* Slight shadow for lifting effect */ rgba(0, 0, 0, 0.2) inset 0 -4px 8px,
-    /* Darker inner shadow at bottom for a stronger fold look */
-      rgba(255, 255, 255, 0.2) inset 0 4px 8px; /* Softer inner light shadow at top for the fold */
+  box-shadow: rgba(0, 0, 0, 0.1) -5px -5px 15px, rgba(0, 0, 0, 0.1) 5px 5px 20px,
+    rgba(0, 0, 0, 0.1) 0 8px 16px, rgba(0, 0, 0, 0.2) inset 0 -4px 8px,
+    rgba(255, 255, 255, 0.2) inset 0 4px 8px;
+  overflow: hidden; /* Ensure overlay stays within card boundaries */
+}
+
+/* Add overlay to make image darker or lighter */
+.item-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Darker overlay with 30% opacity */
+  border-radius: 30px; /* Match the card's border-radius */
+  z-index: 0; /* Ensure it is behind the content */
 }
 
 .item-card h1 {
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: #2e4053;
+  color: #ffffff; /* Change to white for better contrast with darker overlay */
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1; /* Place above the overlay */
 }
-.item-card img {
+
+.item-card #airbnb {
   max-width: 40px;
   margin-top: 20px;
+  position: relative;
+  z-index: 1; /* Place above the overlay */
 }
 
 /* Media Queries for Responsiveness */
